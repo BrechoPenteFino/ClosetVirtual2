@@ -24,7 +24,7 @@ function CdtProduto () {
                 </div>
                 <div>
                     <Input label="Preço" type="number"/>
-                    <Input label="Imagens" type="file"/>
+                    <Input className={styles.File} label="Imagens" type="file"/>
                 </div>
             </form>
             </div>
