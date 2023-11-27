@@ -1,0 +1,17 @@
+.container{
+    /* border: 1px solid green; */
+    width: 76%;
+    height: 820px;
+    background: #D9E6EC;
+    display: flex;
+}
+
+.cards{
+    width: 250px;
+    height: 250px; 
+    justify-content: center;
+    border-radius: 10px;
+    border-radius: 45px 45px 45px 45px;
+    background-color: #ffffff;
+    /* position: relative; */
+} 
