@@ -1,5 +1,5 @@
 import style from './Footer.module.css';
-import logo from "../../img/logo.png"
+import logo from "../../assets/image/logo.png"
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { FaEnvelope } from "react-icons/fa";
 function Footer() {
     return(
         <div className={style.footer}>
+          
            <div className={style.slogan}><img src={logo}></img></div>
 
         <div className={style.container}>
@@ -73,7 +74,7 @@ function Footer() {
         </div>
 
         <div className={style.copyright}>
-            &#169
+            &copy;
             2023 all rights reserved
         </div>
         </div>

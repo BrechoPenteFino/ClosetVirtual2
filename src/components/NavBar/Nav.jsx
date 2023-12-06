@@ -1,14 +1,16 @@
 import style from "./Nav.module.css"
-import logo from "../../img/logo.png"
+import { Link } from 'react-router-dom';
+import logo from '../../assets/image/logo.png';
 import { FaSearch } from "react-icons/fa";
 import { IoPersonCircleSharp } from "react-icons/io5"
 import { FaHeart } from "react-icons/fa";
 import { IoBagHandle } from "react-icons/io5";
 
-function Nav() {
+function Nav(props) {
+
   return (
     <header className={style.header}> 
-    <div className={style.navBar}>
+      <div className={style.navBar}>
         <div className={style.logo}>
           <img src={logo}></img>
         </div>
@@ -16,14 +18,15 @@ function Nav() {
           <ul>
             <li className={style.item}><a href="#"><FaSearch/></a></li>
             <li className={style.item}><a href="#"><IoPersonCircleSharp /></a></li>
-            <li className={style.item}><a href="#"><FaHeart/></a></li>
-            <li className={style.item}><a href="#"><IoBagHandle/></a></li>
+            <li className={style.item}><Link to={"/cadastroDeProduto"}><a><FaHeart/></a></Link></li>
+            <li className={style.item} onClick={() => props.setAbrir(true)}><a href="#"><IoBagHandle/></a></li>
           </ul>
-          
         </div>
       </div>
-      </header>
+    </header>
   )
 }
 
 export default Nav
+
+

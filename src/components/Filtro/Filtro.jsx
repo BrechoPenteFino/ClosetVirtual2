@@ -2,7 +2,7 @@
 import React from "react";
 import style from "./Filtro.module.css";
 import Nav from "../NavBar/Nav";
-import friday from "../../img/friday.png";
+import Anuncio from "../../assets/image/Anuncio.png";
 import Produto from "../Produtos/Produto";
 
 function Filtro() {
@@ -10,7 +10,7 @@ function Filtro() {
 
     <div>
       <Nav />
-      <div className={style.Anuncio}><img src={friday}></img></div>
+      <div className={style.Anuncio}><img src={Anuncio}></img></div>
       <div className={style.containerPage}>
 
       <div className={style.Container}>

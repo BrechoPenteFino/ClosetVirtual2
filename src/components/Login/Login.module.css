@@ -18,6 +18,7 @@ body{
     background: #FFF;
     width: 900px;
     height: 600px;
+    margin: 60px;
 }
 
 .foto{
@@ -78,3 +79,4 @@ body{
   word-break: break-word;
   border: 0;
 }
+
