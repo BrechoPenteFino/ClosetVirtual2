@@ -2,14 +2,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 import style from "./Nav.module.css";
 import logo from "../../img/logo.png";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa"; //lupa
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { IoBagHandle } from "react-icons/io5";
+import { IoHeart } from "react-icons/io5";
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 
-function Nav() {
+function NavAdm() {
   //barra de pesquisa
   const location = useLocation();
   const [componenteVisivel, setComponenteVisivel] = useState(false);
@@ -71,6 +72,11 @@ function Nav() {
               </a>
             </li>
             <li className={style.item}>
+                <a href="#">
+                <IoHeart/>
+                </a>
+            </li>
+            <li className={style.item}>
               <a href="#">
                 <IoBagHandle />
               </a>
@@ -82,4 +88,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default NavAdm;

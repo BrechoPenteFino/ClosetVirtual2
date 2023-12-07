@@ -5,6 +5,7 @@ import style from "./Curtidas.module.css";
 import Curtido from "../../img/curtido.png";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoIosHeart } from "react-icons/io";
+import Footer from "../Footer/Footer";
 
 function Curtidas() {
   return (
@@ -13,8 +14,8 @@ function Curtidas() {
       <div className={style.Container}>
         <div>
           <div className={style.texts}>
-            <h1>Itens</h1>
-            <h1>Avaliar</h1>
+            <button>Itens</button>
+            <button>Avaliar</button>
           </div>
           <div className={style.estilo}>
             <div className={style.cards}>
@@ -83,6 +84,7 @@ function Curtidas() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
