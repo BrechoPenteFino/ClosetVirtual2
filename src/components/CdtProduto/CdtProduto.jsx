@@ -22,7 +22,7 @@ function CdtProduto () {
         
                 <div className={styles.formulario}>
                     <div className={styles.button}>
-                        <span><Link to={"/Login"} className={styles.voltar}><SlArrowLeft /></Link></span>
+                        <span><Link to={"/Home"} className={styles.voltar}><SlArrowLeft /></Link></span>
                     </div>
         
                 <form>

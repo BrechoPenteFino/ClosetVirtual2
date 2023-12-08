@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import style from "./Slide.module.css"
-import React from 'react';
 import blusa from '../../assets/image/blusa.jpeg';
 import baixe from '../../assets/image/baixa.png';
+import Botao from "../botao/Botao";
+
 
 function Slide () {
   return (
@@ -22,110 +24,134 @@ function Slide () {
 
               
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 
               <div className={style.cards}>
-                <div className={style.divImage} ><img className={style.imagem} src={blusa} /></div>
+                <div className={style.divImage} ><Link to={"/Detalhes"}><img className={style.imagem} src={blusa} /></Link></div>
                 <div className={style.divTexto}>
                 <h1 className={style.h1}>Cropped Vintage</h1>
                 <h2 className={style.h2}>R$ 40,00</h2>
-                <button className={style.botao}>Comprar</button>
+                <Link to={"/carrinho"} className={style.linkButton}>
+                  <Botao className={style.botao} label="Adicionar carrinho"/>
+                </Link>
                 </div>
               </div>
 

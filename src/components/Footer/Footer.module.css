@@ -8,17 +8,6 @@
     background-color: #09283F;
  }
 
-.slogan{
-    width: 100%;
-    padding-left: 25px;
-}
-
-.slogan img {
-    margin-top: 3%;
-/* mexer */
-    padding-right: 100%;
-}
-
  .link{
     text-decoration: none;
  }
@@ -49,18 +38,21 @@
 .list {
     display: flex;
     flex-direction: column;
-    gap: 0.70rem;
+    gap: .7rem;
     list-style: none;
-    margin-top: -50%;
+    margin-top: -10%;
  }
 
-.socialMedia a:hover {
-    opacity: 0.5;
- }
- 
+.redesSociais{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5%;
+}
+
 .list .link {
     color: #6089A7;
     transition: all 0.4s;
+
  }
 
 .list .link:hover {

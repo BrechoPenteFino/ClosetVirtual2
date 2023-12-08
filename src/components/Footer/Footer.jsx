@@ -9,18 +9,19 @@ import { FaEnvelope } from "react-icons/fa";
 function Footer() {
     return(
         <div className={style.footer}>
-          
-           <div className={style.slogan}><img src={logo}></img></div>
-
         <div className={style.container}>
-            <div className={style.contacts}>
-                <div className={style.socialMedia}>
-                    <a href='https://web.whatsapp.com/' target="blank" ><FaWhatsapp size={30} className={style.whatspp} /></a>
-                    <a href='https://www.instagram.com/' target="blank" ><FaInstagram size={30} className={style.isntagram}/></a>
-                    <a href='https://twitter.com/login?lang=pt' target="blank" ><FaTwitter size={30} className={style.isntagram}/></a>
-                </div>
+            <div className={style.list}>
+                
+                    <h3>Redes Sociais</h3>
+                    <div className={style.redesSociais}>
+                        <a className={style.link} href='https://web.whatsapp.com/' target="blank" ><FaWhatsapp size={30} className={style.whatspp} /></a>
+                        <a className={style.link} href='https://www.instagram.com/' target="blank" ><FaInstagram size={30} className={style.isntagram}/></a>                    
+                        
+                        <a className={style.link} href='https://twitter.com/login?lang=pt' target="blank" ><FaTwitter size={30} className={style.isntagram}/></a>
+                    </div>
+
             </div>
-            
+
             <ul className={style.list}>
                 <li>
                     <h3>Suporte</h3>

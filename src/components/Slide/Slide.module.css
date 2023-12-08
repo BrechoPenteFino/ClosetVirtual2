@@ -94,7 +94,7 @@
 
 .h2{
     font-size: 20px;
-    padding: 2% 0 3% 0;
+    padding: 3%;
     /* font-family: Karla; FONTE */
 
 }
@@ -109,7 +109,7 @@
   font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 30px;
   opacity: 1;
   outline: 0 solid transparent;
   padding: 8px 18px;
