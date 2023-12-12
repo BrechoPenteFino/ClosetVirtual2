@@ -1,16 +1,13 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/alt-text */
-import style from "./NavAdm.module.css";
+import style from "./Nav.module.css";
 import logo from "../../img/logo.png";
-import { FaSearch } from "react-icons/fa"; //lupa
+import { FaSearch } from "react-icons/fa";
 import { IoPersonCircleSharp } from "react-icons/io5";
-import { IoBagHandle } from "react-icons/io5";
-import { IoHeart } from "react-icons/io5";
+import { HiViewGridAdd } from "react-icons/hi"; //adicionar pdt
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 
-function NavAdm() {
+function NavVend() {
   //barra de pesquisa
   const location = useLocation();
   const [componenteVisivel, setComponenteVisivel] = useState(false);
@@ -35,6 +32,7 @@ function NavAdm() {
     setOpçoes(!opçoes);
   };
 
+
   return (
     <header className={style.header}>
       <div className={style.navBar}>
@@ -54,12 +52,15 @@ function NavAdm() {
                 <div className={style.active}>
                   <ul>
                     <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/cadastro">Cadastro </Link></li>
                     <li><Link to="/">Meus Dados</Link></li>
-                    <li><Link to="/vendas">Relatório </Link></li>
+                    <li><Link to="/cdtproduto">Cadastrar Produto</Link></li>
                   </ul>
                 </div>
               </div>
             )}
+
+
             <li className={style.item}>
               <a href="#" onClick={toggleSearchField}>
                 <FaSearch />
@@ -71,9 +72,9 @@ function NavAdm() {
               </a>
             </li>
             <li className={style.item}>
-                <a href="#">
-                <IoHeart/>
-                </a>
+              <a href="#">
+                <HiViewGridAdd/> 
+              </a> 
             </li>
           </ul>
         </div>
@@ -82,4 +83,4 @@ function NavAdm() {
   );
 }
 
-export default NavAdm;
+export default NavVend;

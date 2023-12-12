@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-unused-vars */
 import style from "./Class.module.css";
@@ -25,9 +26,9 @@ function NovoComentario(){
     }
   };
 
-  const renderSelectedStar = (starValue) => {
-    return selectedStar >= starValue ? <IoMdStar /> : <IoIosStarOutline />;
-  };
+    const renderSelectedStar = (starValue) => {
+      return selectedStar >= starValue ? <IoMdStar /> : <IoIosStarOutline />;
+    };
 
   return (
     <>
@@ -72,7 +73,6 @@ function NovoComentario(){
                <h4>{<IoMdStar/>}</h4>
             </div>
             <TextArea value="Anonimo: Adorei" className={style.input} />
-
           </div>
 
           <div className={style.Avaliar}>
@@ -91,17 +91,16 @@ function NovoComentario(){
                   </div>
                 ))}
                 <icon className={style.Editar}><HiOutlinePencilAlt/></icon>
-                <icon className={style.Lixeira}><IoTrashBin/></icon>
-                <icon className={style.Enviar}><RiSendPlaneFill/></icon>
+                <icon  className={style.Lixeira}><IoTrashBin/></icon>
+                <icon  className={style.Enviar}><RiSendPlaneFill/></icon>
                 <icon onClick={()=> setAvaliacaoVisivel(false)}className={style.X}><IoClose/></icon>
                 
               </div>
               <div className={style.input}>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="" cols="30" rows="10"> </textarea>
               </div>
             </div>
           </> }
-
         </div>
       </div>
     </>

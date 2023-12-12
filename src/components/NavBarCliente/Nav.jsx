@@ -1,19 +1,40 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
-import style from "./NavAdm.module.css";
+import style from "./Nav.module.css";
 import logo from "../../img/logo.png";
-import { FaSearch } from "react-icons/fa"; //lupa
+import { FaSearch } from "react-icons/fa";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { IoBagHandle } from "react-icons/io5";
-import { IoHeart } from "react-icons/io5";
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
+import Carrinho from "../Carrinho/Carrinho";
+import { BrowserRouter,Router,Route, useHistory } from "react-router-dom";
+import { BsPersonCheckFill } from "react-icons/bs";
+import Perfil from "../Perfil/Perfil";
 
-function NavAdm() {
+function Nav(props) {
   //barra de pesquisa
   const location = useLocation();
   const [componenteVisivel, setComponenteVisivel] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+
+  const navigate = useNavigate();
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      setComponenteVisivel(true);
+    }
+  };
+
+  const handleInnerKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      navigate('/filtro')
+    }
+  };
 
   useEffect(() => {
     // Verifique se a localização atual é "/filtro"
@@ -35,6 +56,20 @@ function NavAdm() {
     setOpçoes(!opçoes);
   };
 
+  const [abrir, setAbrir] = useState (false);
+
+  const toggleAbrir = () => {
+    setAbrir(!abrir);
+  }
+
+  const [perfil, setPerfil] = useState (false);
+
+  const togglePerfil = () => {
+    setPerfil(!perfil);
+    setOpçoes(!opçoes)
+  }
+
+
   return (
     <header className={style.header}>
       <div className={style.navBar}>
@@ -45,7 +80,12 @@ function NavAdm() {
           <ul>
             {componenteVisivel && (
               <div className={style.inputPesquisa}>
-                <input type="text" placeholder="Pesquisar produto" />
+                <input 
+                type="text"
+                placeholder="Pesquisar produto"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyPress={handleInnerKeyPress} />
               </div>
             )}
 
@@ -54,12 +94,18 @@ function NavAdm() {
                 <div className={style.active}>
                   <ul>
                     <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/">Meus Dados</Link></li>
-                    <li><Link to="/vendas">Relatório </Link></li>
+                    <li><Link to="/cadastro">Cadastro </Link></li>
+                    <li><a onClick={togglePerfil}>Perfil</a></li>
                   </ul>
                 </div>
               </div>
             )}
+
+            {perfil && (
+              <Perfil togglePerfil={togglePerfil} />
+            )}
+            
+
             <li className={style.item}>
               <a href="#" onClick={toggleSearchField}>
                 <FaSearch />
@@ -71,15 +117,15 @@ function NavAdm() {
               </a>
             </li>
             <li className={style.item}>
-                <a href="#">
-                <IoHeart/>
-                </a>
-            </li>
+              <a href="#" onClick={toggleAbrir}>
+                <IoBagHandle/></a>
+              </li>
           </ul>
         </div>
       </div>
+      <Carrinho abrir={abrir} setAbrir={setAbrir}/>
     </header>
   );
 }
 
-export default NavAdm;
+export default Nav;
